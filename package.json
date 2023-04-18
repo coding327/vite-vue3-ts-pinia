@@ -15,7 +15,8 @@
     "prepare": "husky install",
     "commit:main": "git add . && czg && git push -u origin main:main",
     "commit:dev": "git add . && czg && git push -u origin dev:dev",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "git push --follow-tags origin dev"
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
