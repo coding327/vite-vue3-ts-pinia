@@ -32,7 +32,11 @@ export const createVitePlugins = (
   }),
   // 是否生成打包预览，分析依赖包大小做优化处理
   viteEnv.VITE_PROXY &&
-    visualizer({ filename: "stats.html", gzipSize: true, brotliSize: true }),
+    (visualizer({
+      filename: "stats.html",
+      gzipSize: true,
+      brotliSize: true,
+    }) as PluginOption),
 ];
 
 /**
